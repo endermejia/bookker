@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Bookker';
+
+  constructor(private location: Location) {
+  }
+
+  volver(): void {
+    this.location.back();
+  }
 }

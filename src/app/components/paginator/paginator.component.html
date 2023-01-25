@@ -1,0 +1,17 @@
+<nav class="center_div" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"
+        [class.disabled]="!hasPreviousPage"
+        (click)="previousPage()">
+      <a class="page-link">Anterior</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link">Página actual: {{page}}</a>
+    </li>
+    <li class="page-item"
+        [class.disabled]="!hasNextPage"
+        (click)="nextPage()">
+      <a class="page-link">Siguiente</a>
+    </li>
+  </ul>
+</nav>
